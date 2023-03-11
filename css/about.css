@@ -1,0 +1,69 @@
+.main .about-section .about-image-section .imageAboutPage{
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    border-radius:;
+    transition: all .2s;
+}
+
+.main .about-section .about-image-section .imageAboutPage:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+
+.main .about-section .about-image-section .card-image{
+    background-image: linear-gradient(163deg, #ebadb6 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+.card-image:hover {
+    box-shadow: 0px 0px 30px 1px rgba(235,173,182, 0.30);
+} 
+
+/*  about text section */
+.main .about-section .about-text-section h4{
+    margin-top: 20px;
+    color: var(--btn);
+    font-weight: 500;
+}
+
+.main .about-section .about-text-section h1{
+    background-color: blue;
+    background-image: linear-gradient(45deg, #ebadb6, var(--btn));
+    font-weight: 800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.main .about-section p{
+    text-indent: 50px;
+    color: var(--white);
+}
+
+/* my about goal */
+.main .about-section .about-goals-section h1{
+    background-color: blue;
+    background-image: linear-gradient(45deg, #ebadb6, var(--btn));
+    font-weight: 800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 1200px) {
+    .main .about-section .bg-about{
+        background: var(--bg);
+        height: 100%;
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main .about-section .bg-about{
+        background: var(--bg);
+        height: 100%;
+    }
+}

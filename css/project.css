@@ -1,0 +1,50 @@
+.main .project-section .bg{
+    background: var(--bg) !important;
+    min-height: 20vh;
+    height: 20%;
+}
+
+.main .project-section h1{
+    font-size: 3rem;
+    margin-top: 47px;
+    background: var(--white);
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--bg) !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px transparent;
+}
+
+
+.main .project-section h5{
+    font-weight: bolder;
+    color: var(--btn);
+}
+
+.main .project-section .card{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+}
+
+.main .project-section .btn{
+    background: var(--btn);
+    color: var(--white);
+}
+
+.main .project-section .btn:hover{
+    background: transparent;
+    border: 2px solid var(--btn);
+    color: blue;
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+    .main .project-section {
+        text-align: center;
+    }
+
+    .main .project-section img{
+        width: 98%;
+    }
+  }

@@ -1,0 +1,71 @@
+
+ .contact-section .row{
+    background: var(--bg) !important;
+    color: var(--white);
+
+}
+
+.contact-section h1{
+    color: var(--white);
+    text-align: center;
+    padding-top: 5%;
+    font-weight: 900;
+    text-decoration: underline 4px solid var(--btn);
+    text-underline-offset: 8px;
+}
+
+.contact-section{
+    font-size: 15px;
+    color: var(--white);
+}
+
+.contact-section input{
+    background: inherit;
+    color: var(--white);
+}
+
+.contact-section input:focus{
+    background: inherit;
+    color: var(--white);
+}
+
+
+.contact-section textarea {
+    background: inherit;
+}
+
+.main .contact-section textarea:focus{
+    background: inherit;
+    color: var(--white);
+}
+
+.main .contact-section h5{
+    padding-top: 10px;
+}
+
+.main .contact-section p{
+    padding-top: 0px;
+}
+
+.main .contact-section button{
+    background: var(--btn);
+    color: var(--white);
+}
+
+.main .contact-section button:hover{
+    background: transparent;
+    border: 2px solid var(--btn);
+}
+
+.main .contact-section a{
+    background: inherit;
+    border: 2px solid var(--btn);
+    border-radius: 50%;
+    transition: transform .2s;
+
+}
+
+.main .contact-section a:hover{
+    background: var(--btn);
+    transform: scale(1.3);
+}

@@ -1,0 +1,17 @@
+.main .service-section h1{
+    text-decoration: underline 4px solid var(--btn);
+    text-underline-offset: 8px;
+}
+
+.main .service-section i{
+    color: var(--btn) !important;
+}
+
+.main .service-section p{
+    color: var(--btn) !important;
+}
+.main .service-section .card{
+    background: linear-gradient(135deg, #ebadb6 0%, #aceae1 100%);
+    border-radius: 7px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}

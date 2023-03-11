@@ -1,0 +1,292 @@
+/* loading page */
+.loading {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    border: 5.5px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.loader::before {
+    border-color: #474bff #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+.loader::after {
+    margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+    100% {
+    transform: rotate(1turn);
+    }
+}
+
+.main #animated_background {
+    background-color: var(--bg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.main .home-section {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main .home-section .nav-main a {
+    background-image: linear-gradient(
+      to right,
+      var(--btn),
+      var(--btn) 50%,
+        var(--white) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+.main .home-section .nav-main a:before{
+    content: '';
+    background: var(--btn);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.main .home-section .nav-main a:hover {
+    background-position: 0;
+}
+  
+.main .home-section .nav-main a:hover::before{
+    width: 100%;
+}
+  
+
+/* hero */
+.main .home-section .hero-main{
+    color: var(--white) !important;
+}
+
+
+.main .home-section .hero-main .hero-text p{
+    font-size: 1.5rem;
+} 
+
+.main .home-section .hero-main .hero-text h1{
+    font-size: 3.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(../image/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+
+    }
+} 
+
+.main .home-section .hero-main .hero-text  .hero_desc {
+    font-size: 30px !important;
+}
+
+.main .home-section .hero-main .hero-text  .auto-type {
+    color: var(--btn);
+}
+
+.main .home-section .hero-main .hero-text .dlr{
+    background: var(--btn);
+    color: var(--white);
+    margin-top: 10px;
+}
+
+.main .home-section .hero-main .hero-text .dlr:hover{
+    background: transparent;
+    border: 2px solid var(--btn);
+}
+
+.main .home-section .hero-main .hero-text .btn-secondary{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.main .home-section .hero-main .hero-text .btn-secondary{
+    width: 45px;
+    text-shadow: none;
+    transition: transform .2s;
+    background-color: #53555a;
+}
+
+.main .home-section .hero-main .hero-text  .btn-facebook:hover{
+    transform: scale(1.3);
+    background-color: var(--btn);
+}
+
+.main .home-section .hero-main .hero-text  .btn-github:hover{
+    transform: scale(1.3);
+    color: black;
+    background-color: var(--white);;
+}
+
+.main .home-section .hero-main .hero-text .btn-linkedin:hover{
+    transform: scale(1.3);
+    color: var(--white);
+    background-color: #5460e6;
+}
+
+
+/* desktop */
+@media screen and (max-width: 1600px) {
+
+    .main .home-section .nav-main  .navbarDark {
+        background-color: rgba(31, 32, 36, .7);;
+        color: var(--white);
+    }
+    .main .home-section .hero-main{
+        padding-left: 10%;
+    }
+    .main .home-section .hero-main .hero-text{
+        padding-top: 30%;
+    }
+
+
+    .main .home-section .hero-main .hero-image img{
+        margin-top: 20%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(5px 5px 10px #555);
+        transition: 0.5s ease-out 100ms;
+        border-radius: 10%;
+    }
+
+    .main .home-section .hero-main .hero-image img:hover {
+        transform: scale(1.05);
+    }
+    
+    .main .home-section .hero-main .hero-image::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.503);
+        width: 25rem;
+        height: 50px;
+        bottom: 200px;
+        filter: blur(20px);
+        border-radius: 50%;
+    }
+}
+
+
+/* laptop */
+@media screen and (max-width: 992) {
+    .main .home-section .hero-main .hero-text{
+        padding-top: 20%;
+        text-align: center;
+    }
+    .main .home-section .hero-main .hero-image{
+        margin-top: 0;
+    }
+}
+
+/* tablet */
+@media screen and (max-width: 768) {
+    .main .home-section .nav-main  .navbarDark {
+        background-color: rgba(31, 32, 36, .7);;
+        color: var(--white);
+    }
+    .main .home-section .hero-main .hero-text{
+        padding-top: 50%;
+    }
+    .main .home-section .hero-main .hero-image{
+        margin-top: 0;
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .main .home-section .nav-main  .navbarDark {
+        background-color: rgba(31, 32, 36, .7);;
+        color: var(--white);
+    }
+    .main .home-section .nav-main .navbarScroll .navbarDark {
+        background-color: var(--bg) !important;
+        opacity: 0.7 !important;
+        color: var(--white);
+    }
+
+    .main .home-section .hero-main .hero-text{
+        text-align: center;
+        padding-top: 50%;
+        line-height: 80%;
+    }
+    .main .home-section .hero-main .hero-text p{
+        font-size: 1rem;
+    } 
+    .main .home-section .hero-main .hero-text h1{
+        font-size: 2.5rem;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        background: url(../image/back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+    @keyframes back{
+        100%{
+            background-position: 2000px 0;
+    
+        }
+    } 
+
+    .main .home-section .hero-main .hero-image{
+        margin-top: 5px;
+    }
+    .main .home-section .hero-main img{
+        display: none;
+    }
+}
